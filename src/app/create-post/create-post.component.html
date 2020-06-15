@@ -1,0 +1,15 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <label>
+        userId:
+        <input type="text" formControlName="userId" required>
+    </label>
+    <label>
+        title:
+        <input type="text" formControlName="title" required>
+    </label>
+    <label>
+        body:
+        <input type="text" formControlName="body" required>
+    </label>
+    <button type="submit" [disabled]="!postForm.valid">Submit</button>
+</form>
